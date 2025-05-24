@@ -6,12 +6,12 @@ pipeline {
     }
 
     environment {
-        AWS_ACCOUNT_ID = "124355663661"
-        REGION = "ap-northeast-2"
-        REPO_URI = "${AWS_ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/sre-training"
+        AWS_ACCOUNT_ID = "862848730563"
+        REGION = "us-west-2"
+        REPO_URI = "862848730563.dkr.ecr.us-west-2.amazonaws.com/taariq"
         DOCKER_IMAGE = "sre-training-cart:${VERSION}"
         DOCKER_REGISTRY = 'docker.io'
-        DOCKER_REGISTRY_CREDENTIALS = 'docker-creds'
+        DOCKER_REGISTRY_CREDENTIALS = 'docker-dreds'
     }
 
     stages {
@@ -49,8 +49,8 @@ pipeline {
                     echo "📤 Pushing Docker image to Docker Hub..."
                     sh """
                         docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD}
-                        docker tag ${DOCKER_IMAGE} muralisocial123/${DOCKER_IMAGE}
-                        docker push muralisocial123/${DOCKER_IMAGE}
+                        docker tag ${DOCKER_IMAGE} taariq123-code/${DOCKER_IMAGE}
+                        docker push taariq123-code/${DOCKER_IMAGE}
                     """
                 }
             }
