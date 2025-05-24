@@ -9,7 +9,7 @@ pipeline {
         AWS_ACCOUNT_ID = "862848730563"
         REGION = "us-west-2"
         REPO_URI = "862848730563.dkr.ecr.us-west-2.amazonaws.com/taariq"
-        DOCKER_IMAGE = "sre-training-cart:${VERSION}"
+        DOCKER_IMAGE = "SRE_TAARIQ:${VERSION}"
         DOCKER_REGISTRY = 'docker.io'
         DOCKER_REGISTRY_CREDENTIALS = 'taariq1997'
     }
